@@ -10,12 +10,57 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <nav class="nav">
-          <a href="" class="link logo">LOGO</a>
-        </nav>
+        <a href="" class="link logo">LOGO</a>
+        <button
+          class="btn-menu button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./image/icons.svg#icon-menu"></use>
+            <use class="icon-cross" href="./image/icons.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link link link--active" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <!-- contacts -->
+          <ul class="contacts-list list">
+            <li class="contacts-list__item">
+              <a
+                class="contacts-list__link link"
+                href="mailto:info@devstudio.com"
+                title="написать письмо"
+              >
+                <svg class="contacts-list__icon" width="16" height="12">
+                  <use href="./image/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link link" href="tel:+380961111111" title="позвонить"
+                ><svg class="contacts-list__icon" width="10" height="16">
+                  <use href="./image/icons.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
+      <button class="btn-modal-open button" type="button" data-modal-open>Заказать услугу</button>
       <section class="section features">
         <div class="container">
           <h2 class="section-title title">Features</h2>
@@ -40,6 +85,107 @@
           </ul>
         </div>
       </section>
+      <section class="section picture">
+        <div class="container">
+          <!-- адаптивная верстка с фиксированной ширинойв точках перелома размер указан-->
+          <!-- <div class="card-thumb">
+            <img
+              class="img"
+              srcset="./image/img.jpg 1x, ./image/img@2x.jpg 2x, ./image/img@3x.jpg 3x"
+              src="./image/img.jpg"
+              alt="men"
+              width="240"
+            />
+          </div> -->
+          <!-- отзывчивая верстка -->
+          <ul class="img-list list">
+            <li class="img-list-item">
+                <img
+                  class="img"
+                  srcset="./image/img.jpg 270px, ./image/img@2x.jpg 540px, ./image/img@3x.jpg 810px"
+                  src="./image/img.jpg"
+                  alt="men"
+                  sizes="(min-width: 1140px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+            </li>
+            <li class="img-list-item">
+                <img
+                  class="img"
+                  srcset="./image/img.jpg 270px, ./image/img@2x.jpg 540px, ./image/img@3x.jpg 810px"
+                  src="./image/img.jpg"
+                  alt="men"
+                  sizes="(min-width: 1140px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+            </li>
+            <li class="img-list-item">
+                <img
+                  class="img"
+                  srcset="./image/img.jpg 270px, ./image/img@2x.jpg 540px, ./image/img@3x.jpg 810px"
+                  src="./image/img.jpg"
+                  alt="men"
+                  sizes="(min-width: 1140px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+            </li>
+            <li class="img-list-item">
+                <img
+                  class="img"
+                  srcset="./image/img.jpg 270px, ./image/img@2x.jpg 540px, ./image/img@3x.jpg 810px"
+                  src="./image/img.jpg"
+                  alt="men"
+                  sizes="(min-width: 1140px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+            </li>
+          </ul>
+          <div class="card-thumb-2">
+              <!-- <img
+                class="img"
+                srcset="./image/img.jpg 270px, ./image/img@2x.jpg 540px, ./image/img@3x.jpg 810px"
+                src="./image/img.jpg"
+                alt="men"
+                sizes="(min-width: 800px) 33vw, (min-width: 500px) 60vw, 100vw"
+              />
+          </div> -->
+        </div>
+      </section>
     </main>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop__modal modal">
+        <button class="modal__button-close" type="button" title="Закрыть" data-modal-close>
+          <svg class="modal__icon-close" width="11" height="11">
+            <use href="./image/icons.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, alias impedit natus
+          praesentium fugiat maxime saepe tenetur commodi molestias inventore laboriosam quae,
+          cupiditate reprehenderit? Eligendi quam sit accusamus numquam minima.
+        </p>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, alias impedit natus
+          praesentium fugiat maxime saepe tenetur commodi molestias inventore laboriosam quae,
+          cupiditate reprehenderit? Eligendi quam sit accusamus numquam minima.
+        </p>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, alias impedit natus
+          praesentium fugiat maxime saepe tenetur commodi molestias inventore laboriosam quae,
+          cupiditate reprehenderit? Eligendi quam sit accusamus numquam minima.
+        </p>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
+        menuBtnRef.addEventListener('click', () => {
+          const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
