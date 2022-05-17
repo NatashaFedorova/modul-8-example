@@ -29,7 +29,7 @@ li {
 }
 
 .container {
-  outline: 1px solid blue;
+  // outline: 1px solid blue;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -347,7 +347,58 @@ li {
     margin: 15px;
   }
 }
-
 .img {
   outline: 1px solid #4545d5;
+}
+
+// hero=========================
+
+.hero {
+  width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../image/desktop/d-bg-hero1600.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../image/desktop/d-bg-hero@2x.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 288dpi),
+  screen and (min-resolution: 3dppx) {
+  .hero {
+    background-image: url(../image/desktop/d-bg-hero@3x.jpg);
+  }
+}
+.hero__title {
+  margin-bottom: 30px;
+  max-width: 696px;
+  @include font(900, 44px, 1.36, 0.06em);
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+.hero__button {
+  display: block;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  color: #fff;
+}
+.img-222 {
+  margin: 20px 0;
 }
