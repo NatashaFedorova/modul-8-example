@@ -27,6 +27,7 @@ li {
   padding: 0;
   margin: 0;
 }
+
 .container {
   outline: 1px solid blue;
   padding-left: 15px;
@@ -308,6 +309,7 @@ li {
 .img {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .img-list {
